@@ -42,7 +42,7 @@
 #include "timer.h"
 #include "watchdog.h"
 #include "string.h"
-#include "hmi800.h"
+#include "app800.h"
 
 #ifdef CONFIG_USER_HW_INIT
 extern void hw_init_hook(void);
@@ -119,7 +119,8 @@ static void ddramc_init(void)
 	writel(csa, AT91C_BASE_CCFG + CCFG_EBICSA);
 
 	/* DDRAM2 Controller initialize */
-	ddram_initialize(AT91C_BASE_DDRSDRC, AT91C_DDRAM_BASE_ADDR, &ddramc_reg);
+	ddram_initialize(AT91C_BASE_DDRSDRC0, AT91C_DDRAM_BASE_ADDR, &ddramc_reg);
+        ddram_initialize(AT91C_BASE_DDRSDRC1, AT91C_DDRAM_BASE_ADDR+0x08000000, &ddramc_reg);
 }
 #endif /* #ifdef CONFIG_DDR2 */
 
@@ -237,7 +238,7 @@ void at91_spi0_hw_init(void)
 #ifdef CONFIG_SDCARD
 static void sdcard_set_of_name_board(char *of_name)
 {
-	strcpy(of_name, "hmi800.dtb");
+	strcpy(of_name, "app800.dtb");
 }
 
 void at91_mci0_hw_init(void)

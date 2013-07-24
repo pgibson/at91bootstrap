@@ -72,8 +72,8 @@
 #include "at91sama5d3xek.h"
 #endif
 
-#ifdef CONFIG_HMI800
-#include "hmi800.h"
+#ifdef CONFIG_APP800
+#include "app800.h"
 #endif
 
 #endif /* #ifndef __BOARD_H__ */

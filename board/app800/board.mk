@@ -1,7 +1,7 @@
 CPPFLAGS += \
-	-DCONFIG_HMI800 \
+	-DCONFIG_APP800 \
 	-mcpu=arm926ej-s
 
 ASFLAGS += \
-	-DCONFIG_HMI800 \
+	-DCONFIG_APP800 \
 	-mcpu=arm926ej-s

@@ -192,8 +192,8 @@ config CONFIG_AT91SAMA5D3XEK
 	help
 	  Use the AT91SAM9N12EK Development board
 
-config  CONFIG_HMI800
-	bool "hmi800"
+config  CONFIG_APP800
+	bool "app800"
 	select CONFIG_DDR2
 	select ALLOW_DATAFLASH
 	select ALLOW_NANDFLASH
@@ -205,7 +205,7 @@ config  CONFIG_HMI800
 	select ALLOW_DATAFLASH_RECOVERY
 	select ALLOW_NANDFLASH_RECOVERY
 	help
-	  Use the Xylem HMI800 board
+	  Use the Xylem APP800 board
 
 endchoice
 
@@ -222,7 +222,7 @@ config CONFIG_CHIP
 	default "AT91SAM9X5"	if CONFIG_AT91SAM9X5EK
 	default "AT91SAM9N12"	if CONFIG_AT91SAM9N12EK
 	default "AT91SAMA5D3X"	if CONFIG_AT91SAMA5D3XEK
-	default "AT91SAM9G45"	if CONFIG_HMI800
+	default "AT91SAM9G45"	if CONFIG_APP800
 	help
 	  Name of the board, A Board Support package
 	  (BSP) must be available.
@@ -240,7 +240,7 @@ config CONFIG_BOARD
 	default "at91sam9n12ek"	if CONFIG_AT91SAM9N12EK
 	default "at91sam9m10g45ek"	if CONFIG_AT91SAM9M10G45EK
 	default "at91sama5d3xek"	if CONFIG_AT91SAMA5D3XEK
-	default "hmi800"	if CONFIG_HMI800
+	default "app800"	if CONFIG_APP800
 	help
 	  Name of the board, A Board Support package
 	  (BSP) must be available.
@@ -258,7 +258,7 @@ config CONFIG_MACH_TYPE
 	default "3373"	if CONFIG_AT91SAM9X5EK		# 3373
 	default "9999"	if CONFIG_AT91SAM9N12EK
 	default "9999"	if CONFIG_AT91SAMA5D3XEK
-	default "1830"	if CONFIG_HMI800
+	default "1830"	if CONFIG_APP800
 	help
 
 config CONFIG_LINK_ADDR
@@ -285,7 +285,7 @@ config CONFIG_TOP_OF_MEMORY
 	default "0x308000"	if CONFIG_AT91SAM9X5EK
 	default "0x308000"	if CONFIG_AT91SAM9N12EK
 	default "0x310000"	if CONFIG_AT91SAMA5D3XEK
-	default "0x30A000"	if CONFIG_HMI800
+	default "0x30A000"	if CONFIG_APP800
 	help
 
 choice

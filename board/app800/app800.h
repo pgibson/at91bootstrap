@@ -25,8 +25,8 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-#ifndef __HMI800_H__
-#define __HMI800_H__
+#ifndef __APP800_H__
+#define __APP800_H__
 
 /*
  * PMC Settings
@@ -109,4 +109,4 @@ extern void at91_spi0_hw_init(void);
 
 extern void at91_mci0_hw_init(void);
 
-#endif /* __HMI800__ */
+#endif /* __APP800__ */
