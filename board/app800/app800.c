@@ -120,7 +120,7 @@ static void ddramc_init(void)
 
 	/* DDRAM2 Controller initialize */
 	ddram_initialize(AT91C_BASE_DDRSDRC0, AT91C_DDRAM_BASE_ADDR, &ddramc_reg);
-        ddram_initialize(AT91C_BASE_DDRSDRC1, AT91C_DDRAM_BASE_ADDR+0x08000000, &ddramc_reg);
+	BOARD_ConfigureDdramCp1(16);
 }
 #endif /* #ifdef CONFIG_DDR2 */
 
